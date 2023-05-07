@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Karaoke, Room
 
-# Register your models here.
+admin.site.register(Karaoke)
+admin.site.register(Room)
