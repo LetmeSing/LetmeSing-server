@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register('', views.AlbumViewSet)
 
 urlpatterns = [
-    path('/', include(router.urls))
+    path('/album/', include(router.urls))
 ]
