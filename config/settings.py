@@ -54,7 +54,9 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    'accounts'
+    'accounts',
+    'albums',
+    'karaoke',
 ]
 
 THIRD_PARTY_APPS = [
