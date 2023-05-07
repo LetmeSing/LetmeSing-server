@@ -13,7 +13,6 @@ class Karaoke(models.Model):
     address = models.CharField(
         max_length=40, null=True, blank=True, verbose_name='매장 주소')
     star = models.FloatField(null=True, blank=True, verbose_name='별점')
-    review = models.TextField(null=True, blank=True, verbose_name="매장 후기")
     waiting = models.IntegerField(
         null=True, blank=True, verbose_name="대기 팀 숫자")
 
