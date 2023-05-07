@@ -21,10 +21,6 @@ pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
 secret_file = os.path.join(BASE_DIR, 'secrets.json')  # secrets.json 파일 위치를 명시
 
 with open(secret_file) as f:
@@ -44,8 +40,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -59,11 +54,11 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-
+    'accounts'
 ]
 
 THIRD_PARTY_APPS = [
-
+    'rest_framework',
 ]
 
 
@@ -105,6 +100,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = mySettings.DATABASES
+
+AUTH_USER_MODEL = 'accounts.Member'
 
 
 # Password validation
