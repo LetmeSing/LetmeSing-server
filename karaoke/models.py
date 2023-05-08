@@ -15,6 +15,8 @@ class Karaoke(models.Model):
     star = models.FloatField(null=True, blank=True, verbose_name='별점')
     waiting = models.IntegerField(
         null=True, blank=True, verbose_name="대기 팀 숫자")
+    latitude = models.FloatField(null=True, blank=True, verbose_name="위도")
+    longitude = models.FloatField(null=True, blank=True, verbose_name="경도")
 
     class Meta:
         verbose_name = '노래방'
