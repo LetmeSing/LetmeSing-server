@@ -23,4 +23,4 @@ class Music(models.Model):
     name = models.CharField(max_length=20, null=True,
                             blank=True, verbose_name='음악 이름')
     singer = models.CharField(max_length=20, null=True,
-                            blank=True, verbose_name='가수 이름')
+                              blank=True, verbose_name='가수 이름')

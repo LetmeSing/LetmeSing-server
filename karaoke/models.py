@@ -8,13 +8,8 @@ class Karaoke(models.Model):
     remainingSeat = models.IntegerField(
         null=True, blank=True, verbose_name="잔여석")
     totalSeat = models.IntegerField(null=True, blank=True, verbose_name='총 좌석')
-    callNumber = models.CharField(
-        max_length=15, null=True, blank=True, verbose_name='매장 번호')
     address = models.CharField(
         max_length=40, null=True, blank=True, verbose_name='매장 주소')
-    star = models.FloatField(null=True, blank=True, verbose_name='별점')
-    waiting = models.IntegerField(
-        null=True, blank=True, verbose_name="대기 팀 숫자")
     latitude = models.FloatField(null=True, blank=True, verbose_name="위도")
     longitude = models.FloatField(null=True, blank=True, verbose_name="경도")
 
