@@ -3,8 +3,9 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register('', views.AlbumViewSet)
+router.register(r'', views.AlbumViewSet)
+router.register(r'music', views.MusicViewSet)
 
 urlpatterns = [
-    path('/album/', include(router.urls))
+    path('', include(router.urls))
 ]
