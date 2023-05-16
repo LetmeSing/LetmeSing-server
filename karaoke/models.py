@@ -3,7 +3,7 @@ from django.db import models
 
 class Karaoke(models.Model):
     id = models.AutoField(primary_key=True, null=False, blank=False)
-    name = models.CharField(max_length=20, null=True,
+    name = models.CharField(max_length=40, null=True,
                             blank=True, verbose_name='매장 명')
     remainingSeat = models.IntegerField(
         null=True, blank=True, verbose_name="잔여석")
