@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register('', views.KaraokeViewSet)
 
 urlpatterns = [
-    path('/', include(router.urls))
+    path('', include(router.urls))
 ]
