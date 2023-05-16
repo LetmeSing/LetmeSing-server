@@ -15,6 +15,16 @@ class Album(models.Model):
     description = models.CharField(
         null=True, blank=True, verbose_name="앨범 설명", max_length=50)
 
+    class Meta:
+        verbose_name = '앨범'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+    def __int__(self):
+        return self.id
+
 
 class Music(models.Model):
     music_id = models.AutoField(primary_key=True, null=False, blank=False)
@@ -24,3 +34,13 @@ class Music(models.Model):
                             blank=True, verbose_name='음악 이름')
     singer = models.CharField(max_length=20, null=True,
                               blank=True, verbose_name='가수 이름')
+
+    class Meta:
+        verbose_name = "음악"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+    def __int__(self):
+        return self.music_id
