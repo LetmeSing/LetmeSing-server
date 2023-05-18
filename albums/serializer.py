@@ -9,8 +9,6 @@ class MusicSerializer(serializers.ModelSerializer):
 
 
 class AlbumSerializer(serializers.ModelSerializer):
-    music = serializers.StringRelatedField(many=True)
-
     class Meta:
         model = Album
         fields = '__all__'
