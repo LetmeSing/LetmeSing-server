@@ -5,7 +5,7 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Permis
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
-    def create_user(self, login_id, password, nickname):
+    def create_user(self, login_id, password, nickname, is_master):
         if not login_id:
             raise ValueError('Users must have a Login ID')
         if not nickname:
@@ -14,6 +14,7 @@ class UserManager(BaseUserManager):
         user = self.model(
             login_id=login_id,
             nickname=nickname,
+            is_master=is_master
         )
         user.set_password(password)
         user.save(using=self._db)
@@ -41,7 +42,8 @@ class Member(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(
         default=True, verbose_name="계정 활성화 여부")
     is_staff = models.BooleanField(
-        default=False, verbose_name="점주 여부")
+        default=False, verbose_name="관리자 페이지 접근 권한")
+    is_master = models.IntegerField(default=0, verbose_name="점주 여부")
     nickname = models.CharField(
         unique=True, max_length=20, null=True, blank=True, verbose_name="닉네임")
 

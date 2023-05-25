@@ -13,9 +13,11 @@ class RegisterSerializer(serializers.ModelSerializer):
         login_id = validated_data.get('login_id')
         nickname = validated_data.get('nickname')
         password = validated_data.get('password')
+        is_master = validated_data.get('is_master')
         user = Member(
             login_id=login_id,
-            nickname=nickname
+            nickname=nickname,
+            is_master=is_master
         )
         user.set_password(password)
         user.save()
