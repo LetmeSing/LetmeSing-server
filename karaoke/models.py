@@ -1,8 +1,11 @@
 from django.db import models
+from accounts.models import Member
 
 
 class Karaoke(models.Model):
     id = models.AutoField(primary_key=True, null=False, blank=False)
+    memberId = models.ForeignKey(Member, related_name="karaoke", on_delete=models.CASCADE,
+                                 db_column="memberId", verbose_name="유저 ID", default=None)
     name = models.CharField(max_length=40, null=True,
                             blank=True, verbose_name='매장 명')
     remainingSeat = models.IntegerField(
