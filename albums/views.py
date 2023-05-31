@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Album, Music
 from .serializer import AlbumSerializer, MusicSerializer
-from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -25,9 +24,8 @@ class AlbumList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 # Album의 detail을 보여주는 역할
-
-
 class AlbumDetail(APIView):
     # Album 객체 가져오기
     def get_object(self, pk):
@@ -57,15 +55,7 @@ class AlbumDetail(APIView):
         album.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-# class AlbumViewSet(viewsets.ModelViewSet):
-#     queryset = Album.objects.all()
-#     serializer_class = AlbumSerializer
-
-
-# class MusicViewSet(viewsets.ModelViewSet):
-#     queryset = Music.objects.all()
-#     serializer_class = MusicSerializer
-
+# Music의 List를 보여주는 역할
 class MusicList(APIView):
     # Music list를 보여줄 때
     def get(self, request):
@@ -83,9 +73,8 @@ class MusicList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 # Music의 detail을 보여주는 역할
-
-
 class MusicDetail(APIView):
     # Music 객체 가져오기
     def get_object(self, pk):
