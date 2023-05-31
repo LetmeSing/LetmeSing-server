@@ -49,6 +49,7 @@ class AuthView(APIView):
             res = Response(
                 {
                     "user": serializer.data,
+                    # "is_master" : user
                     "message": "login success",
                     "token": {
                         "access": access_token,
