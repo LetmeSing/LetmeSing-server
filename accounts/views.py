@@ -36,7 +36,6 @@ class RegisterAPIView(APIView):
 
 
 class AuthView(APIView):
-
     def post(self, request):
         user = authentication.authenticate(
             login_id=request.data.get("login_id"), password=request.data.get("password")
@@ -61,3 +60,5 @@ class AuthView(APIView):
             return res
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
