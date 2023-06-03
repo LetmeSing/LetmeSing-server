@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
 
-
+# Album의 List를 보여주는 역할
 class AlbumList(APIView):
     # album list를 보여줄 때
     def get(self, request):
@@ -54,6 +54,7 @@ class AlbumDetail(APIView):
         album = self.get_object(pk)
         album.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 # Music의 List를 보여주는 역할
 class MusicList(APIView):
