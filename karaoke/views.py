@@ -9,4 +9,3 @@ from rest_framework import viewsets
 class KaraokeViewSet(viewsets.ModelViewSet):
     queryset = Karaoke.objects.all()
     serializer_class = KaraokeSerializer
-
