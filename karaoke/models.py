@@ -15,6 +15,7 @@ class Karaoke(models.Model):
         max_length=40, null=True, blank=True, verbose_name='매장 주소')
     latitude = models.FloatField(null=True, blank=True, verbose_name="위도")
     longitude = models.FloatField(null=True, blank=True, verbose_name="경도")
+    image = models.ImageField(upload_to="노래방 사진들")
 
     class Meta:
         verbose_name = '노래방'
