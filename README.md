@@ -1,5 +1,6 @@
 # LetmeSing-server
-LetmeSing 캡스톤 프로젝트의 백엔드 레포지토리입니다.
+LetmeSing 캡스톤 프로젝트의 백엔드 레포지토리입니다.  
+Server Developer : 소프트웨어학부 20206142 김민규
 
 # API SERVER - AWS EC2를 이용한 DRF API SERVER 구현
   API SERVER BASE URL : http://letmesing.kro.kr:8000/
