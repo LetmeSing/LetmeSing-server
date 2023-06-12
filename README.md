@@ -18,11 +18,3 @@ LetmeSing 캡스톤 프로젝트의 백엔드 레포지토리입니다.
 
 👉🏻[API SPEC LINK](https://ivory-rutabaga-c4a.notion.site/API-SPEC-f04d263d1bc345218b4ebcd8b8266768) <br/><br/>
 --
-
-[api/accounts](https://www.notion.so/cccac75ab4d74c6da3f5472f91ac9cf2?pvs=21)
-
-[api/album](https://www.notion.so/ff7dfd67c48447abb8f0826ba7d7e498?pvs=21)
-
-[api/seat](https://www.notion.so/dce29361dc4c40d1a0a70d7aed34c542?pvs=21)
-
-[api/recommend](https://www.notion.so/e0baff86b7aa4b28a5501a866e245be3?pvs=21)
